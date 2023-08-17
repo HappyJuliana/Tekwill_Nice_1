@@ -29,8 +29,8 @@
       <input type="radio" id="gender3" name="gender3" value="Other">
       <label for="gender3">Other</label><br>
 
-      <label for="DOB">Date of Birthday:</label>
-      <input type="date" id="DOB" name="DOB">
+      <label for="date-of-birth">Date of Birthday:</label>
+      <input type="date" id="date-of-birth" name="date-of-birth">
     </fieldset>
 
     <fieldset>
@@ -89,11 +89,17 @@
         <input type="url" id="website" name="website"> <br>
 
         <label for="experience-html">Experience Level with HTML:</label>
-        <input type="range" id="experience-html" name="experience-html" value="10">
+        <input type="range" id="experience-html" name="experience-html" value="5" min="0" max="10" step="1" oninput="displayValue.value = `${experienceRange.value}/10`">
+        <output id="displayValue">5/10</output>
+          <script>
+            const experienceRange = document.getElementById('experience-html');
+            const displayValue = document.getElementById('displayValue');
+            experienceRange.addEventListener('input', function() {displayValue.value = `${experienceRange.value}/10`;});
+          </script>
     </fieldset>
 
     <input type="submit" value="Submit">
     <input type="reset" value="Reset">
 </form>
 </body>
-</html>
+</html> 
