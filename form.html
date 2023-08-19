@@ -2,6 +2,91 @@
 <html lang=en>
  <head>
   <title>Test</title>
+  <style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800px;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+   fieldset {
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 60%;
+    border-width: 1px;
+    border-color: teal;
+    border-radius: 4px;
+  }
+
+  legend {
+    color: teal;
+    font-style: italic;
+    font-weight: 500;
+    font-size:23px;
+  }
+
+  label {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  span {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  input[type="number"],
+  input[type="url"],
+  textarea,
+  select
+  {
+    margin: 5px 5px 10px 5px;
+    border-width: 1px;
+    border-color: rgb(196, 193, 193);
+    border-style: groove;
+    border-radius: 3px;
+    height: 25px;
+    width: 95%;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] 
+    {
+    margin: 10px 5px 5px 10px;
+  }
+
+  input[type="submit"]
+  {
+    margin: 5px;
+    background-color:rgb(42, 110, 236);
+    color:white;
+    height: 40px;
+    width: 90px;
+    border-radius:5px;
+    border-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+
+  input[type="reset"]
+  {
+    margin: 5px;
+    background-color:rgb(104, 103, 103);
+    color:white;
+    height: 40px;
+    width: 90px;
+    border-radius:5px;
+    border-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+  }
+  
+ </style>
  </head>
  <body>
 
@@ -9,28 +94,28 @@
 
     <fieldset>
       <legend>Basic User Information:</legend>
-      <label for="fname">Full Name:</label>
+      <label for="fname">Full Name:</label><br>
       <input type="text" id="fname" name="fname" required><br>
 
-      <label for="eml">Email:</label>
+      <label for="eml">Email:</label><br>
       <input type="email" id="eml" name="eml" required><br>
 
-      <label for="pswd1">Password:</label>
-      <input type="password" id="pswd1" name="pswd1" required>      
-      <label for="pswd2">Confirm Password:</label>
+      <label for="pswd1">Password:</label><br>
+      <input type="password" id="pswd1" name="pswd1" required><br>    
+      <label for="pswd2">Confirm Password:</label><br>
       <input type="password" id="pswd2" name="pswd2" required><br>
       
  
-      <span>Gender:</span>
+      <span>Gender:</span><br>
       <input type="radio" id="gender1" name="gender1" value="Male">
-      <label for="gender1">Male</label>
+      <label for= "gender1" style="font-weight:100;">Male</label>
       <input type="radio" id="gender2" name="gender2" value="Female">
-      <label for="gender2">Female</label>
+      <label for="gender2" style="font-weight:100;">Female</label>
       <input type="radio" id="gender3" name="gender3" value="Other">
-      <label for="gender3">Other</label><br>
+      <label for="gender3" style="font-weight:100;">Other</label><br><br>
 
-      <label for="date-of-birth">Date of Birthday:</label>
-      <input type="date" id="date-of-birth" name="date-of-birth">
+      <label for="date-of-birth">Date of Birthday:</label><br>
+      <input type="date" id="date-of-birth" name="date-of-birth" style="font-family: Courier New, monospace;">
     </fieldset>
 
     <fieldset>
@@ -55,13 +140,13 @@
 
     <fieldset>
         <legend>Preferences:</legend>
-        <span>Preferred Contact Method:</span>
-        <input type="checkbox" id="method1" name="method1" value="Email">
-        <label for="method1"> Email</label>
+        <span>Preferred Contact Method:</span><br>
+        <input type="checkbox" id="method1" name="method1" value="Email" >
+        <label for="method1" style="font-weight:100;"> Email</label>
         <input type="checkbox" id="method2" name="method2" value="Phone">
-        <label for="method2"> Phone</label>
+        <label for="method2" style="font-weight:100;"> Phone</label>
         <input type="checkbox" id="method3" name="method3" value="P-Mail">
-        <label for="method3"> Postal Mail</label><br>
+        <label for="method3" style="font-weight:100;"> Postal Mail</label><br><br>
 
         <label for="favcolor">Favorite Color:</label>
         <input type="color" id="favcolor" name="favcolor">
@@ -83,7 +168,7 @@
     <fieldset>
         <legend>Profile:</legend>
         <label for="profile-pic">Upload a Profile Picture:</label>
-        <input type="file" id="profile-pic" name="profile-pic" accept=".png, .jpg, .jpeg"> <br>
+        <input type="file" id="profile-pic" name="profile-pic" accept=".png, .jpg, .jpeg"> <br><br>
 
         <label for="website">Website URL:</label>
         <input type="url" id="website" name="website"> <br>
